@@ -49,7 +49,9 @@ const checkMatch = (p, id) => {
     console.log(filledByPlayer);
     // let msg = "";
     if (checkCombinations(filledByPlayer)) {
-      p === 1 ? alert("P1 is the winner") : alert("P2 is the winner");
+      p === 1
+        ? setTimeout(() => alert("P1 is the winner"), 100)
+        : setTimeout(() => alert("P2 is the winner"), 100);
       return true;
     }
   }
