@@ -66,7 +66,7 @@ const clicked = (id) => {
     filledBoxes.push(id);
     let player = player1Turn ? 1 : 2;
     moves.push({ player, id });
-    checkMatch(player, id) ? endGame() : null;
+    checkMatch(player, id) ||  moves.length >= 9 ? endGame() : null;
     player1Turn = !player1Turn;
     moveCount++;
   }
